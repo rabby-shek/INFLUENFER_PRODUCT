@@ -1,0 +1,32 @@
+[
+    {
+       "id": 1,
+       "image": "./images/drone.png",
+       "name": "Drone",
+       "price": "$1399.00",
+       "rate" : "4.0",
+       "description": "Vision Sensor + GPS Precise Hover, 30-min Max. Flight Time, 3-Axis Gimbal 2.7K Camera, 4 km...",
+       "path" : "drone.php"
+      
+    },
+    {
+        "id": 2,
+        "image": "./images/tripod.png",
+        "name": "Flex Tripod",
+        "price": "$90.00",
+        "rate" : "4.0",
+        "description": "Great Quality Material, Lightweight and Portable, Perfect For Events and Sports Activity...",
+        "path" : "flextripod.php"
+     },
+     {
+        "id": 3,
+        "image": "./images/lights.png",
+        "name": "Light Setup",
+        "price": "$350.00",
+        "rate" : "4.0",
+        "description": "Best for YouTube Home Studio setup, Best Suitable for Continuous Light Source...",
+        "path" : "lightsetup.php"
+     }
+   
+    
+]

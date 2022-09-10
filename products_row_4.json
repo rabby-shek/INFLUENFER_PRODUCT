@@ -1,0 +1,32 @@
+[
+    {
+       "id": 1,
+       "image": "./images/Backpack (3).jpg",
+       "name": "Backpack",
+       "price": "$50.00",
+       "rate" : "4.5",
+       "description": "Carry everything you need for a busy day in this generously-sized backpack...",
+       "path" : "backpak.php"
+      
+    },
+    {
+        "id": 2,
+        "image": "./images/Camera Lens (1).jpg",
+        "name": "Camera Lens",
+        "price": "200.00$",
+        "rate" : "4.5",
+        "description": "The Canon EF-S 18-135mm IS USM Zoom Lens is a zoom optimized lens for sti... ",
+        "path" : "cameralens.php"
+     },
+     {
+        "id": 3,
+        "image": "./images/Headphones (1).jpg",
+        "name": "Headphones",
+        "price": "$70.00",
+        "rate" : "4.5",
+        "description": "BEATS SOLO PRO 1 is an On-Ear Wireless Headphone. It has a sleek, streamli...",
+        "path" : "headphone.php"
+     }
+   
+    
+]

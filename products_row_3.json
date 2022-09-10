@@ -1,0 +1,32 @@
+[
+    {
+       "id": 1,
+       "image": "./images/mic.png",
+       "name": "Microphone",
+       "price": "$180.00",
+       "rate" : "4.5",
+       "description": "smooth, natural sound and low noise, Custom shock mount, Switchable 80 Hz high-pass filter...",
+       "path" : "microphon.php"
+      
+    },
+    {
+        "id": 2,
+        "image": "./images/setup.png",
+        "name": "Photoshoot Set",
+        "price": "200.00$",
+        "rate" : "4.5",
+        "description": "Background Support System, 4 x 85W 5500K Bulbs, Umbrellas Softbox Lighting Kit...",
+        "path" : "photoshotset.php"
+     },
+     {
+        "id": 3,
+        "image": "./images/single-light.png",
+        "name": "Green Screen",
+        "price": "$99.00",
+        "rate" : "4.5",
+        "description": "Soft Pure GreenScreen Sheet Virtual Background, Cotton Cloth Fabric Curtain...",
+        "path" : "greenscreen.php"
+     }
+   
+    
+]

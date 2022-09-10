@@ -15,6 +15,7 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4deb8dd6fa.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -49,192 +50,178 @@ session_start();
 
 
    <div class="container">
-    <!--product row 1 start here -->
-
-    <div class="first_row">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="./images/action.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Action Camera</h5>
-          <h3>$599.00</h3>
-          <div class="rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <span>5.0</span>
-        </div>
-          <p class="card-text">5K Video, Waterproof, HyperSmooth 3.0, Live Streaming, Webcam, TimeWarp 3.0, Front Display +
-            Rear Touch Screen,
-            20MP Photo with SuperPhoto...</p>
-          <a href="#" class="btn btn-primary">Buy Now</a>
-        </div>
-      </div>
+                     <!--product row 1 start here -->
       
-   
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="./images/airpod.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Earbuds</h5>
-              <h3>$299.00</h3>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <span>4.5</span>
-                    </div>
-              <p class="card-text">True Wireless Noise Cancelling, Compatible with Apple & Android, Built-in Microphone, IPX4
-                Rating...</p>
-              <a href="#" class="btn btn-primary">Buy Now</a>
-            </div>
-          </div>
-          
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="./images/camera.png"alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Vlogging Camera</h5>
-              <h3>$599.00</h3>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <span>4.5</span>
-                    </div>
-              <p class="card-text">20.1 Megapixels, Shoot then share easily, Shoot 4K video like a Pro, Designed for creators to
-                love...</p>
-              <a href="#" class="btn btn-primary">Buy Now</a>
-            </div>
-          </div>
+                     <div class="first_row">
+<?php
+      $json_data = file_get_contents("products_row_1.json");
+      $products = json_decode($json_data, true);
 
-    </div>
-      <!--product row 1 ends here -->
-
-      <!--2nd row start here-->
-      <div class="second_row">
-
+      if(count($products) != 0){
+        foreach ($products as $product) {
+           ?>
+           
+             <div class="card" style="width: 18rem;">
+                <img class="card-img-top" style="height:245px;" src="<?php echo $product['image']; ?>" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $product['name']; ?></h5>
+                  <h3><?php echo $product['price']; ?></h3>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span><?php echo $product['rate']; ?></span>
+                </div>
+                  <p class="card-text"><?php echo $product['description']; ?></p>
+                  <a href="<?php echo $product['path']; ?>" class="btn btn-primary">Buy Now</a>
+                </div>
+              </div>
+           <?php
+        }
+     }
+  ?>
+  </div>
+              <!--product row 1 ends here -->
       
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="./images/drone.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Drone</h5>
-          <h3>$1399.00</h3>
-          <div class="rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <span>5.0</span>
-        </div>
-          <p class="card-text">Vision Sensor + GPS Precise Hover, 30-min Max. Flight Time, 3-Axis Gimbal 2.7K Camera, 4 km
-            HD Video Transmission...</p>
-          <a href="#" class="btn btn-primary">Buy Now</a>
-        </div>
-      </div>
+              <!--2nd row start here-->
+              <div class="second_row">
+<?php
+      $json_data = file_get_contents("products_row_2.json");
+      $products = json_decode($json_data, true);
 
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top"src="./images/tripod.png"  alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Flex Tripod</h5>
-          <h3>$90.00</h3>
-          <div class="rating">
-            <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-            <span>4.0</span>
-        </div>
-          <p class="card-text">Great Quality Material, Lightweight and Portable, Perfect
-            For Events and Sports Activity...</p>
-          <a href="#" class="btn btn-primary">Buy Now</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="./images/lights.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Light Setup</h5>
-          <h3>$350.00</h3>
-          <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-              <span>4.5</span>
-          </div>
-          <p class="card-text">Best for YouTube Home Studio setup, Best Suitable for Continuous Light Source...</p>
-          <a href="#" class="btn btn-primary">Buy Now</a>
-        </div>
-      </div>
-    </div>
-
-
-      <!--2nd row ends here-->
-
-<!--3rd row start here-->
-<div class="third_row">
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="./images/mic.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Microphone</h5>
-    <h3>$180.00</h3>
-      <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-          <span>4.0</span>
-      </div>
-    <p class="card-text">smooth, natural sound and low noise, Custom shock mount, Switchable 80 Hz high-pass filter...</p>
-    <a href="#" class="btn btn-primary">Buy Now</a>
+      if(count($products) != 0){
+        foreach ($products as $product) {
+           ?>
+           
+             <div class="card" style="width: 18rem;">
+                <img class="card-img-top" style="height:245px;" src="<?php echo $product['image']; ?>" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $product['name']; ?></h5>
+                  <h3><?php echo $product['price']; ?></h3>
+                  <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                    <span><?php echo $product['rate']; ?></span>
+                </div>
+                  <p class="card-text"><?php echo $product['description']; ?></p>
+                  <a href="<?php echo $product['path']; ?>" class="btn btn-primary">Buy Now</a>
+                </div>
+              </div>
+           <?php
+        }
+     }
+  ?>
   </div>
-</div>
+      
+      
+              <!--2nd row ends here-->
+      
+      <!--3rd row start here-->
+      <div class="third_row">
+<?php
+      $json_data = file_get_contents("products_row_3.json");
+      $products = json_decode($json_data, true);
 
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="./images/setup.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Photoshoot Set</h5>
-    <div class="rating">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star-half-alt"></i>
-      <span>4.5</span>
+      if(count($products) != 0){
+        foreach ($products as $product) {
+           ?>
+           
+             <div class="card" style="width: 18rem;">
+                <img class="card-img-top" style="height:245px;" src="<?php echo $product['image']; ?>" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $product['name']; ?></h5>
+                  <h3><?php echo $product['price']; ?></h3>
+                  <div class="rating">
+                  <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    <span><?php echo $product['rate']; ?></span>
+                </div>
+                  <p class="card-text"><?php echo $product['description']; ?></p>
+                  <a href="<?php echo $product['path']; ?>" class="btn btn-primary" style="margin-bottom: 0px;">Buy Now</a>
+                </div>
+              </div>
+           <?php
+        }
+     }
+  ?>
   </div>
-    <p class="card-text">Background Support System, 4 x 85W 5500K Bulbs, Umbrellas Softbox Lighting Kit...</p>
-    <a href="#" class="btn btn-primary">Buy Now</a>
-  </div>
-</div>
 
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="./images/single-light.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Green Screen</h5>
-    <h3>$99.00</h3>
-      <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <span>5.0</span>
-      </div>
-    <p class="card-text">Soft Pure GreenScreen Sheet Virtual Background, Cotton Cloth Fabric Curtain...</p>
-    <a href="#" class="btn btn-primary">Buy Now</a>
-  </div>
-</div>
-</div>
-<!--3rd row ends here-->
+      <!--4th row start here-->
+      <div class="third_row">
+<?php
+      $json_data = file_get_contents("products_row_4.json");
+      $products = json_decode($json_data, true);
 
+      if(count($products) != 0){
+        foreach ($products as $product) {
+           ?>
+           
+             <div class="card" style="width: 18rem;">
+                <img class="card-img-top" style="height:245px;"  src="<?php echo $product['image']; ?>" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $product['name']; ?></h5>
+                  <h3><?php echo $product['price']; ?></h3>
+                  <div class="rating">
+                  <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                     
+                    <span><?php echo $product['rate']; ?></span>
+                </div>
+                  <p class="card-text"><?php echo $product['description']; ?></p>
+                  <a href="<?php echo $product['path']; ?>" class="btn btn-primary">Buy Now</a>
+                </div>
+              </div>
+           <?php
+        }
+     }
+  ?>
+  </div>
+      <!--4th row ends here-->
+
+      <!--5th row start here-->
+      <div class="third_row">
+<?php
+      $json_data = file_get_contents("products_row_5.json");
+      $products = json_decode($json_data, true);
+
+      if(count($products) != 0){
+        foreach ($products as $product) {
+           ?>
+           
+             <div class="card" style="width: 18rem;">
+                <img class="card-img-top" style="height:245px;" src="<?php echo $product['image']; ?>" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $product['name']; ?></h5>
+                  <h3><?php echo $product['price']; ?></h3>
+                  <div class="rating">
+                  <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    <span><?php echo $product['rate']; ?></span>
+                </div>
+                  <p class="card-text"><?php echo $product['description']; ?></p>
+                  <a href="<?php echo $product['path']; ?>" class="btn btn-primary">Buy Now</a>
+                </div>
+              </div>
+           <?php
+        }
+     }
+  ?>
+  </div>
+      <!--5th row ends here-->
 </div>
 
 
@@ -251,6 +238,7 @@ session_start();
 </footer>
 
 <script src="index.js"></script>
+<script src="back_to_top_button.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

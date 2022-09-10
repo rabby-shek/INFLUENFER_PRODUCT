@@ -8,5 +8,5 @@ if(isset($_SESSION['user_id']))
 
 }
 
-header("Location: login.php");
+header("Location: ./INFLUENFER_PRODUCT_2_html/index.html");
 die;

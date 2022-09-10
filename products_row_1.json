@@ -1,0 +1,32 @@
+[
+    {
+       "id": 1,
+       "image": "./images/action.png",
+       "name": "Action Camera",
+       "price": "$500.00",
+       "rate" : "5.0",
+       "description": "5K Video, Waterproof, HyperSmooth 3.0, Live Streaming, Webcam, TimeWarp 3.0, Front ...",
+       "path" : "actioncameradetails.php"
+      
+    },
+    {
+        "id": 2,
+        "image": "./images/airpod.png",
+        "name": "Earbuds",
+        "price": "$299.00",
+        "rate" : "5.0",
+        "description": "True Wireless Noise Cancelling, Compatible with Apple & Android, Built-in Microphone, IPX4 Rating...",
+        "path" : "earbuds.php"
+     },
+     {
+        "id": 3,
+        "image": "./images/camera.png",
+        "name": "Camera",
+        "price": "$599.00",
+        "rate" : "5.0",
+        "description": "20.1 Megapixels, Shoot then share easily, Shoot 4K video like a Pro, Designed for creators to love...",
+        "path" : "camera.php"
+     }
+   
+    
+]

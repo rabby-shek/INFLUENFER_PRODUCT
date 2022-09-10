@@ -1,0 +1,32 @@
+[
+    {
+       "id": 1,
+       "image": "./images/Drone Display (1).jpg",
+       "name": "Drone Display",
+       "price": "$700.00",
+       "rate" : "4.5",
+       "description": "The HSGN aviator hood for drone pilots mounts to your 7\" FPV monitor for improved outdoor ...",
+       "path" : "dronecamera.php"
+      
+    },
+    {
+        "id": 2,
+        "image": "./images/SmartWatch (1).jpg",
+        "name": "Smart watch",
+        "price": "250.00$",
+        "rate" : "4.5",
+        "description": "Apple Watch Series 6 44mm Silver Aluminum, White Sport Band comes with LTPO OLED Always...",
+        "path" : "watch.php"
+     },
+     {
+        "id": 3,
+        "image": "./images/VR Sets (1).jpg",
+        "name": "VR Sets",
+        "price": "$650.00",
+        "rate" : "4.5",
+        "description": "Experience our most advanced all-in-one VR system yet with Oculus Quest 2. No PC or console...",
+        "path" : "vrsets.php"
+     }
+   
+    
+]
